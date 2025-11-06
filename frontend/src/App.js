@@ -252,13 +252,11 @@ function TaskCard({ task, onEdit, onDelete, onMove }) {
     if (task.status === 'progress') return 'done';
     return null;
   };
-
   const getPrevStatus = () => {
     if (task.status === 'done') return 'progress';
     if (task.status === 'progress') return 'todo';
     return null;
   };
-
   const nextStatus = getNextStatus();
   const prevStatus = getPrevStatus();
 
@@ -276,7 +274,7 @@ function TaskCard({ task, onEdit, onDelete, onMove }) {
           onClick={() => onEdit(task)}
           title="Editar"
         >
-        
+          ✏️{/* Ícone de lápis */}
         </button>
         {prevStatus && (
           <button 
@@ -284,7 +282,7 @@ function TaskCard({ task, onEdit, onDelete, onMove }) {
             onClick={() => onMove(task, prevStatus)}
             title="Mover para trás"
           >
-        
+            ⬅️{/* Ícone de seta para esquerda */}
           </button>
         )}
         {nextStatus && (
@@ -293,19 +291,20 @@ function TaskCard({ task, onEdit, onDelete, onMove }) {
             onClick={() => onMove(task, nextStatus)}
             title="Mover para frente"
           >
-        
+            ➡️{/* Ícone de seta para direita */}
           </button>
         )}
         <button 
-          className="btn-icon btn-delete" 
+          className="btn-icon btn-delete"
           onClick={() => onDelete(task.id)}
           title="Excluir"
         >
-        
+          🗑️{/* Ícone de lixeira */}
         </button>
       </div>
     </div>
   );
 }
+
 
 export default App;
