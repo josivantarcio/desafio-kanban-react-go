@@ -216,6 +216,11 @@ function App() {
           onMove={handleMove}
         />
       </div>
+      <div className="footer">
+        <p>
+          &copy; 2025 Josevan Oliveira — Projeto realizado como desafio de recrutamento para Veritas Consultoria.
+        </p>
+      </div>
     </div>
   );
 }
@@ -274,7 +279,7 @@ function TaskCard({ task, onEdit, onDelete, onMove }) {
           onClick={() => onEdit(task)}
           title="Editar"
         >
-          ✏️{/* Ícone de lápis */}
+          ✏️
         </button>
         {prevStatus && (
           <button 
@@ -282,7 +287,7 @@ function TaskCard({ task, onEdit, onDelete, onMove }) {
             onClick={() => onMove(task, prevStatus)}
             title="Mover para trás"
           >
-            ⬅️{/* Ícone de seta para esquerda */}
+            ⬅️
           </button>
         )}
         {nextStatus && (
@@ -291,7 +296,7 @@ function TaskCard({ task, onEdit, onDelete, onMove }) {
             onClick={() => onMove(task, nextStatus)}
             title="Mover para frente"
           >
-            ➡️{/* Ícone de seta para direita */}
+            ➡️
           </button>
         )}
         <button 
@@ -299,18 +304,11 @@ function TaskCard({ task, onEdit, onDelete, onMove }) {
           onClick={() => onDelete(task.id)}
           title="Excluir"
         >
-          🗑️{/* Ícone de lixeira */}
+          🗑️
         </button>
       </div>
     </div>
   );
-
-<div className="footer">
-  <p>
-    &copy; 2025 Josevan Oliveira — Projeto realizado como desafio de recrutamento para Veritas Consultoria.
-  </p>
-</div>
-
 }
 
 export default App;
