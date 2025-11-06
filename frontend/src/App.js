@@ -313,5 +313,4 @@ function TaskCard({ task, onEdit, onDelete, onMove }) {
 
 }
 
-
 export default App;
