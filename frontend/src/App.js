@@ -304,6 +304,13 @@ function TaskCard({ task, onEdit, onDelete, onMove }) {
       </div>
     </div>
   );
+
+<div className="footer">
+  <p>
+    &copy; 2025 Josevan Oliveira — Projeto realizado como desafio de recrutamento para Veritas Consultoria.
+  </p>
+</div>
+
 }
 
 
